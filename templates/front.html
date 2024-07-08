@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopoGrafiaMejia</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            background-color: white;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px 40px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav img {
+            float: left;
+            padding: 0px 0px;
+            width: 10%;        
+ }
+    </style>
+</head>
+<body>
+
+    {% if formulario_procesado %}
+    <p>¡Formulario procesado correctamente!</p>
+    {% endif %}
+
+
+
+<nav class= "fixed-nav">
+    <img src="/static/pictures/logoEmp.png" alt="Logo de la empresa">
+    <a href="{% url 'pagina_principal' %}">Inicio</a> 
+    <a href="#nuestros-servicios">Nuestros Servicios</a>
+    <a href="{% url 'quienes_somos' %}">Quienes Somos</a>
+    <a href="#contactanos">Contáctenos</a>
+</nav>
+
+
+
+
+<div class="banner-container">
+    <img src="{% static 'pictures/one1mg.png' %}" alt="Banner" class="banner-image">           
+</div>
+
+
+
+<h1 id= "nuestros-servicios"><strong>NUESTROS SERVICIOS</strong></h1>
+
+
+
+<h2>LEVANTAMIENTOS TOPOGRÁFICOS EN GENERAL</h2>
+
+
+<section id="Servicios" class="half-width">
+    <h3>Realizamos levantamientos topográficos con estaciones totales de última generación,
+        equipos actualizados año a año con las más altas precisiones y requerimientos según
+        normas exigidas, para ejecutar de manera eficiente y  precisa.</h3>
+    <div class="half-width">
+        <div>
+            <h4>LEVANTAMIENTOS</h4>
+            <ul>
+                <li>Levantamiento y replanteo</li>
+                <li>Cálculo de movimiento de tierras</li>
+                <li>Estudio de cabidas y linderos</li>
+                <li>Levantamientos planimétricos y altimétricos</li>
+                <li>Levantamientos con drones.</li>
+                <li>Puntos de control y amojonamientos</li>
+                <li>Levantamiento de redes hidro sanitarias.</li>
+            </ul>
+        </div>
+        <div>
+            <h5>ALTA PRECISIÓN</h5>
+            <ul>
+                <li>Realización de redes geodésicas.</li>
+                <li>Monumentico y puntos de control de alta precisión.</li>
+                <li>Determinación de coordenadas con exactitud GPS.</li>
+                <li>Establecimiento de redes geodésicas.</li>
+                <li>Realización de redes de nivelación geodésica.</li>
+                <li>Ubicación precisa de puntos a través de sus coordenadas.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="image-container">
+    <img src="{% static 'pictures/const.jpg' %}" alt="construccion">
+    <img src="{% static 'pictures/urbs.png' %}" alt="urbanismimo">
+    <img src="{% static 'pictures/vias.jpg' %}" alt="viascarretera">
+</div>
+
+
+
+
+<section id="Servicios" class="half-width1">
+    <div class="half-width1">
+
+        
+    
+    
+        <div>
+            <h7>CONSTRUCCION</h7>
+
+            <p>Nuestros servicios de topografía supervisan la correcta ejecución de la obra,
+                contemplando los métodos de cálculo y la representación de las superficies
+                en un modelo digital DWG representado, a su vez, en un plano integral que ayuda a
+                distribuir y definir espacios en construcciones del ramo industrial, comercial,
+                habitacional o complejos de uso mixto.</p>
+           
+        </div>
+        <div>
+        <h8>URBANISMO</h8>
+            
+            <p>La topografía aplicada en replanteo de proyectos y obra civil en urbanismo se encarga de
+                 marcar los puntos contenidos en los planos de urbanismo sobre el terreno. De esta forma
+                 se tiene la ubicación precisa de cada punto y las dimensiones de cada elemento que compone el urbanismo.
+                 Previamente se realiza un levantamiento inicial, que es el punto de partida para los diseños de urbanismo</p>
+               
+            
+        </div>
+
+        <div>
+        <h8>VIAS</h8>
+        <p>Para la ingeniería vial, la topografía es una fase importante y primordial
+            para proyectar una vía, pues esta es la responsable de proporcionar datos detallados
+            de las posibles rutas que se deben tomar en cuenta, el trazado y diseño
+           de la estructura de drenajes, además de detalles geométricos y volumen de tierra.</p>
+
+     </div>
+
+     
+
+
+    </div>
+</section>
+
+
+
+
+    <h1><strong>CLIENTES</strong></h1>
+
+    <div class="banner-container1">
+        <img src="{% static 'pictures/yellowL.png' %}" alt="Banner" class="banner-yellow">           
+    </div>
+
+
+
+    <div class="banner-container2">
+        <img src="{% static 'pictures/logem.png' %}" alt="Banner" class="banner-logos">           
+    </div>
+
+
+    <h1 id="contactanos"><strong>CONTACTANOS</strong></h1>
+
+    <div class="contacto-info">
+        <p>Llame ya!: <span class="telefono">(+57) 316 390 16 90</span></p>
+        <p>Deje su trabajo en manos de profesionales.</p>
+    </div>
+
+    <div class="contacto-info">
+        <p><strong>Oficina Principal</strong></p>
+        <p>Cl. 66 #1-68, Cali, Valle del Cauca</p>
+        <p>Colombia.</p>
+        <p>topografiamejia@gmail.com</p>
+        <p>Teléfono: <span class="telefono">+57 321 773 34 19</span></p>
+    </div>
+
+    <form action="" method="post" class="formulario">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    <section class="footer-section">
+        <div class="footer-content">
+            <p>TOPOGRAFIA Y CONSTRUCCIONES MEJIA S.A.S</p>
+            <p>Contáctanos (+57) 3217733419</p>
+        </div>
+    </section> 
+    
+
+
+</body>
+</html>
